@@ -14,6 +14,20 @@ int main()
     string file_dst = 'dst.png';//出力画像名
     Mat img_src = imread(file_src, 0);//入力画像の読み込み
 
+    Mat img_dst;
+    if(!img_src.data)
+    {
+        cout << 'error, no image data' << endl;
+        return -1;
+    }
+
+    //ウィンドウ生成
+    namedWindow(win_src, WINDOW_AUTOSIZE);
+    namedWindow(win_dst, WINDOW_AUTOSIZE);
+
+    //画像処理
+
+
 
 
 
